@@ -7,13 +7,13 @@ export const authRouter = createTRPCRouter({
   authCallback: publicProcedure.query(async () => {
     const { getUser } = getKindeServerSession();
     const user = getUser();
-    console.log(user);
+    // console.log(user);
     if (!user.id || !user.email) throw new TRPCError({ code: "UNAUTHORIZED" });
 
     // Check if the user is in the database
     try {
       const dbUser = await db.user.findFirst({ where: { id: user.id } });
-      console.log(dbUser);
+      // console.log(dbUser);
       if (!dbUser) {
         try {
           await db.user.create({

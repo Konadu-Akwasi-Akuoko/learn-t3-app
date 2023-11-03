@@ -1,5 +1,8 @@
-import { AuthEndpoints, handleAuth } from "@kinde-oss/kinde-auth-nextjs/server";
-import { NextRequest } from "next/server";
+import {
+  type AuthEndpoints,
+  handleAuth,
+} from "@kinde-oss/kinde-auth-nextjs/server";
+import { type NextRequest } from "next/server";
 
 export function GET(
   request: NextRequest,
