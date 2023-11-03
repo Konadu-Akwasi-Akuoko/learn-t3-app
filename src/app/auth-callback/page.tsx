@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 // import { useRouter, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -37,13 +34,3 @@ export default function AuthCallback() {
     </div>
   );
 }
-
-//
-// {
-//   onSuccess: ({ success }) => {
-//     if (success) {
-//       // User is synced to database
-//       router.push(origin ? `/${origin}` : "/dashboard");
-//     }
-//   },
-// }

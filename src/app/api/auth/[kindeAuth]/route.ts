@@ -1,10 +1,11 @@
 import { AuthEndpoints, handleAuth } from "@kinde-oss/kinde-auth-nextjs/server";
 import { NextRequest } from "next/server";
 
-export async function GET(
+export function GET(
   request: NextRequest,
-  { params }: { params: { kindeAuth: AuthEndpoints } }
+  { params }: { params: { kindeAuth: AuthEndpoints } },
 ) {
   const endpoint = params.kindeAuth;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return handleAuth(request, endpoint);
 }
